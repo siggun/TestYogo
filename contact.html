@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Yoga by Sofia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation (starts scrolled — no hero on this page) -->
+  <nav id="main-nav" class="scrolled">
+    <a href="index.html" class="nav-logo">Yoga by Sofia</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <div
+    class="page-header"
+    style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80');"
+  >
+    <div class="page-header-content">
+      <p class="section-label">Get in Touch</p>
+      <h1>Contact Sofia</h1>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section style="background: var(--cream); padding: 6rem 5%;">
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <p class="section-label">Reach Out</p>
+        <h2>Let's connect</h2>
+        <p>
+          Have a question about classes, private sessions, or a workshop idea?
+          I'd love to hear from you. I reply to all messages within 24 hours.
+        </p>
+
+        <div class="contact-details">
+          <div>
+            <p class="contact-detail-label">Location</p>
+            <p class="contact-detail-value">Seattle, WA</p>
+          </div>
+          <div>
+            <p class="contact-detail-label">Email</p>
+            <p class="contact-detail-value">sofia@yogabysofia.com</p>
+          </div>
+          <div>
+            <p class="contact-detail-label">Phone</p>
+            <p class="contact-detail-value">(206) 555-0182</p>
+          </div>
+          <div>
+            <p class="contact-detail-label">Studio Hours</p>
+            <p class="contact-detail-value">Mon–Sat &nbsp; 6:30 AM – 8:00 PM</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="Facebook">FB</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Doe">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Topic</label>
+          <select id="subject" name="subject">
+            <option value="">Select a topic…</option>
+            <option>Class Information</option>
+            <option>Private Sessions</option>
+            <option>Workshops &amp; Events</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me how I can help…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-sage" style="align-self:flex-start;">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <p class="section-label" style="color:rgba(255,255,255,0.45);">Stay Connected</p>
+    <h2>Join the Community</h2>
+    <p>
+      Receive class updates, seasonal offerings, wellness tips, and a little
+      inspiration delivered to your inbox.
+    </p>
+    <form class="newsletter-form" novalidate>
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">Yoga by Sofia</span>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <span class="footer-copy">&copy; 2026 Yoga by Sofia. All rights reserved.</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
