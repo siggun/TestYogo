@@ -1,284 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classes — Yoga by Chloe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes &amp; Pricing — Ember &amp; Root</title>
+  <meta name="description" content="Studio classes, workshops, private sessions, and events. View pricing and book your spot." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- Navigation (starts scrolled — no hero on this page) -->
-  <nav id="main-nav" class="scrolled">
-    <a href="index.html" class="nav-logo">Yoga by Chloe</a>
-    <ul class="nav-links">
+  <!-- NAVIGATION -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Ember &amp; Root</a>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="classes.html">Classes</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="#book" class="nav-book">Book Now</a></li>
     </ul>
+    <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- Page Header -->
-  <div
-    class="page-header"
-    style="background-image: url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1920&q=80');"
-  >
-    <div class="page-header-content">
-      <p class="section-label">Chloe's Studio</p>
-      <h1>Classes &amp; Schedule</h1>
-    </div>
-  </div>
+  <main>
 
-  <!-- Class Cards -->
-  <section style="background: var(--cream); padding: 6rem 5%;">
-    <p class="section-label text-center">Explore the Offerings</p>
-    <h2 class="text-center" style="font-style:italic; margin-bottom:0.75rem;">
-      Find the right class<br>for you
-    </h2>
-    <p style="text-align:center; color:var(--muted); max-width:520px; margin:0 auto 3.5rem; font-weight:300;">
-      Each class is crafted to meet you where you are — from complete
-      beginners to seasoned practitioners.
-    </p>
-
-    <div class="classes-full-grid">
-
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            style="height:260px;"
-            src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=700&q=80"
-            alt="Signature Glow Flow"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Dynamic · All Levels</p>
-          <h3>Signature Glow Flow</h3>
-          <p>Chloe's signature Vinyasa-inspired method. Fluid movement sequences tied to breath build warmth, strength, and inner radiance. Expect music, creativity, and sweat.</p>
-          <p class="class-price">60 min &nbsp;·&nbsp; $22 per class</p>
-        </div>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            style="height:260px;"
-            src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=700&q=80"
-            alt="Candlelit Yin Yoga"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Restorative · All Levels</p>
-          <h3>Candlelit Yin Yoga</h3>
-          <p>Slow, meditative practice with long-held postures (3–5 min). Releases deep connective tissue and calms the nervous system. Candles and ambient sound included.</p>
-          <p class="class-price">75 min &nbsp;·&nbsp; $20 per class</p>
-        </div>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            style="height:260px;"
-            src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?w=700&q=80"
-            alt="Hatha Foundations"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Foundations · Beginners</p>
-          <h3>Hatha Foundations</h3>
-          <p>A welcoming intro to yoga fundamentals. Learn alignment, breathwork, and key postures at a relaxed pace. Perfect for newcomers or those returning after a break.</p>
-          <p class="class-price">60 min &nbsp;·&nbsp; $18 per class</p>
-        </div>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            style="height:260px;"
-            src="https://images.unsplash.com/photo-1591291621164-2c6367723315?w=700&q=80"
-            alt="Breathwork and Meditation"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Mindfulness · All Levels</p>
-          <h3>Breathwork &amp; Meditation</h3>
-          <p>A dedicated pranayama and meditation practice. Techniques drawn from various traditions to reduce stress, increase clarity, and nurture inner stillness.</p>
-          <p class="class-price">45 min &nbsp;·&nbsp; $16 per class</p>
-        </div>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            style="height:260px;"
-            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=700&q=80"
-            alt="Sunrise Glow Flow"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Morning · Intermediate</p>
-          <h3>Sunrise Glow Flow</h3>
-          <p>Start your day with intention. Sun Salutations, standing sequences, and a short meditation to set a luminous tone for the day ahead.</p>
-          <p class="class-price">45 min &nbsp;·&nbsp; $18 per class</p>
-        </div>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            style="height:260px;"
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=700&q=80"
-            alt="Private Sessions"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Private · Personalised</p>
-          <h3>1-on-1 Private Sessions</h3>
-          <p>Tailored entirely to your goals, body, and schedule. Ideal for targeted recovery, deepening your practice, or exploring yoga for the first time.</p>
-          <p class="class-price">60 min &nbsp;·&nbsp; From $75</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Schedule Table -->
-  <section style="background: var(--white); padding: 5rem 5%;">
-    <div class="schedule-wrapper">
-      <div class="schedule-section-title">
-        <p class="section-label text-center">Weekly Schedule</p>
-        <h2>Upcoming Classes</h2>
-      </div>
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>Day</th>
-            <th>Time</th>
-            <th>Class</th>
-            <th>Level</th>
-            <th>Duration</th>
-            <th>Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Monday</strong></td>
-            <td>7:00 AM</td>
-            <td>Sunrise Glow Flow</td>
-            <td><span class="badge badge-sage">Intermediate</span></td>
-            <td>45 min</td>
-            <td>Studio A</td>
-          </tr>
-          <tr>
-            <td><strong>Monday</strong></td>
-            <td>6:30 PM</td>
-            <td>Hatha Foundations</td>
-            <td><span class="badge badge-dark">Beginner</span></td>
-            <td>60 min</td>
-            <td>Studio B</td>
-          </tr>
-          <tr>
-            <td><strong>Wednesday</strong></td>
-            <td>7:00 AM</td>
-            <td>Signature Glow Flow</td>
-            <td><span class="badge badge-sage">All Levels</span></td>
-            <td>60 min</td>
-            <td>Studio A</td>
-          </tr>
-          <tr>
-            <td><strong>Wednesday</strong></td>
-            <td>7:00 PM</td>
-            <td>Candlelit Yin Yoga</td>
-            <td><span class="badge badge-sage">All Levels</span></td>
-            <td>75 min</td>
-            <td>Studio B</td>
-          </tr>
-          <tr>
-            <td><strong>Thursday</strong></td>
-            <td>12:00 PM</td>
-            <td>Breathwork &amp; Meditation</td>
-            <td><span class="badge badge-sage">All Levels</span></td>
-            <td>45 min</td>
-            <td>Online</td>
-          </tr>
-          <tr>
-            <td><strong>Friday</strong></td>
-            <td>7:00 AM</td>
-            <td>Sunrise Glow Flow</td>
-            <td><span class="badge badge-sage">Intermediate</span></td>
-            <td>45 min</td>
-            <td>Studio A</td>
-          </tr>
-          <tr>
-            <td><strong>Saturday</strong></td>
-            <td>9:00 AM</td>
-            <td>Signature Glow Flow</td>
-            <td><span class="badge badge-sage">All Levels</span></td>
-            <td>60 min</td>
-            <td>Studio A</td>
-          </tr>
-          <tr>
-            <td><strong>Saturday</strong></td>
-            <td>11:00 AM</td>
-            <td>Hatha Foundations</td>
-            <td><span class="badge badge-dark">Beginner</span></td>
-            <td>60 min</td>
-            <td>Studio B</td>
-          </tr>
-          <tr>
-            <td><strong>Sunday</strong></td>
-            <td>5:00 PM</td>
-            <td>Candlelit Yin Yoga</td>
-            <td><span class="badge badge-sage">All Levels</span></td>
-            <td>75 min</td>
-            <td>Studio B</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="text-align:center; margin-top:2rem; color:var(--muted); font-size:0.875rem; font-weight:300;">
-        Drop-in welcome. Book a spot via the
-        <a href="contact.html" style="color:var(--accent); border-bottom:1px solid var(--accent);">contact form</a>.
+    <!-- ═══════════════════════════════════════════════════════
+         PAGE HERO
+         Squarespace: Banner Block (top of Classes page)
+         ═══════════════════════════════════════════════════════ -->
+    <header class="page-hero">
+      <span class="section-label">What We Offer</span>
+      <h1>Classes &amp; Offerings</h1>
+      <p>
+        For the beginner finding their breath and the seasoned practitioner
+        going deeper. Every offering is an invitation.
       </p>
-    </div>
-  </section>
+    </header>
 
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <p class="section-label" style="color:rgba(255,255,255,0.45);">Stay Connected</p>
-    <h2>Join the Community</h2>
-    <p>
-      Receive class updates, seasonal offerings, wellness tips, and a little
-      inspiration delivered to your inbox.
-    </p>
-    <form class="newsletter-form" novalidate>
-      <input type="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+    <!-- ═══════════════════════════════════════════════════════
+         OFFERINGS — alternating image + text layout
+         Squarespace: Each offering = a Row Section with
+         Image Block (50%) + Text Block (50%)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="offerings" aria-labelledby="offerings-heading">
 
-  <!-- Footer -->
+      <div class="offerings-intro">
+        <span class="section-label">The Offerings</span>
+        <h2 id="offerings-heading">Find Your Practice</h2>
+        <p>
+          We don't chase a body type — we chase awareness and presence,
+          on and off the mat. Whatever path brings you here, there's space for you.
+        </p>
+      </div>
+
+      <!-- 01 Studio Classes -->
+      <div class="offering-item">
+        <!-- REPLACE: swap with a real class photo -->
+        <img
+          class="offering-img"
+          src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=900&q=80"
+          alt="Group yoga class in a studio — placeholder"
+          loading="lazy"
+        />
+        <div class="offering-text">
+          <span class="offering-number">01</span>
+          <h3>Studio Classes</h3>
+          <p>
+            Drop into any of our regularly scheduled group classes. We move
+            through breath, flow, and stillness together — no experience required,
+            all bodies welcome. Classes vary in style and intensity so there's
+            always something that meets you where you are.
+          </p>
+          <div class="offering-meta">
+            <span>60–75 min</span>
+            <span>All Levels</span>
+            <span>Weekly Schedule</span>
+          </div>
+          <!-- REPLACE: link to Squarespace Scheduling / Acuity / Mindbody -->
+          <a href="#book" class="btn btn-primary">Book a Class</a>
+        </div>
+      </div>
+
+      <!-- 02 Specialized Workshops -->
+      <div class="offering-item">
+        <!-- REPLACE: workshop/event photo -->
+        <img
+          class="offering-img"
+          src="https://images.unsplash.com/photo-1593810451137-5dc55105dace?w=900&q=80"
+          alt="Yoga workshop setting — placeholder"
+          loading="lazy"
+        />
+        <div class="offering-text">
+          <span class="offering-number">02</span>
+          <h3>Specialized Workshops</h3>
+          <p>
+            Monthly deep-dives into specific themes — breathwork &amp; pranayama,
+            somatic awareness, yin &amp; restoration, seasonal rituals, and more.
+            Workshops are immersive, intentional, and limited to small groups
+            so every participant gets real attention.
+          </p>
+          <div class="offering-meta">
+            <span>2–3 Hours</span>
+            <span>Small Group</span>
+            <span>Monthly</span>
+          </div>
+          <a href="#book" class="btn btn-primary">View Upcoming Workshops</a>
+        </div>
+      </div>
+
+      <!-- 03 Private Lessons -->
+      <div class="offering-item">
+        <!-- REPLACE: one-on-one session photo -->
+        <img
+          class="offering-img"
+          src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=900&q=80"
+          alt="Private yoga instruction — placeholder"
+          loading="lazy"
+        />
+        <div class="offering-text">
+          <span class="offering-number">03</span>
+          <h3>Private Lessons</h3>
+          <p>
+            Completely tailored to you. We start with a conversation about
+            where you are and where you want to go, then build a practice
+            around that. Private sessions accelerate growth in a way group
+            classes can't — you move at your own pace with undivided attention.
+          </p>
+          <div class="offering-meta">
+            <span>60–90 min</span>
+            <span>1-on-1</span>
+            <span>In-Studio or Virtual</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Inquire About Private Sessions</a>
+        </div>
+      </div>
+
+      <!-- 04 Private Group Sessions -->
+      <div class="offering-item">
+        <!-- REPLACE: group session photo -->
+        <img
+          class="offering-img"
+          src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=80"
+          alt="Group yoga session — placeholder"
+          loading="lazy"
+        />
+        <div class="offering-text">
+          <span class="offering-number">04</span>
+          <h3>Private Group Sessions</h3>
+          <p>
+            Bring your people. Perfect for bachelorette parties, friend groups,
+            corporate wellness days, birthday celebrations, or any occasion that
+            deserves something meaningful. We'll create a custom experience just
+            for your group of 2–8 people.
+          </p>
+          <div class="offering-meta">
+            <span>60–90 min</span>
+            <span>2–8 People</span>
+            <span>Custom Experience</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Plan Your Group Session</a>
+        </div>
+      </div>
+
+      <!-- 05 Events & Retreats -->
+      <div class="offering-item">
+        <!-- REPLACE: event/retreat photo -->
+        <img
+          class="offering-img"
+          src="https://images.unsplash.com/photo-1602192509154-0b900ee1f851?w=900&q=80"
+          alt="Yoga retreat event outdoors — placeholder"
+          loading="lazy"
+        />
+        <div class="offering-text">
+          <span class="offering-number">05</span>
+          <h3>Events &amp; Retreats</h3>
+          <p>
+            Curated experiences that go beyond the mat. Pop-up classes in
+            unexpected spaces, community wellness gatherings, seasonal
+            ceremonies, and multi-day retreats. Follow along on Instagram
+            to stay in the loop on what's coming next.
+          </p>
+          <div class="offering-meta">
+            <span>Varies</span>
+            <span>Community</span>
+            <span>Seasonal</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Stay in the Loop</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PRICING
+         Squarespace: Pricing Table Block  OR  3-column layout
+         with Markdown Blocks
+         ═══════════════════════════════════════════════════════ -->
+    <section class="pricing" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <span class="section-label" style="color: var(--g300); text-align: center; display: block;">Investment</span>
+        <h2 id="pricing-heading">Transparent Pricing</h2>
+        <p>Payments accepted in studio, online, or via link at booking. No hidden fees.</p>
+
+        <div class="pricing-grid">
+
+          <div class="price-card">
+            <h3>Drop-In</h3>
+            <div class="price-amount"><sup>$</sup>22</div>
+            <p class="price-period">per class</p>
+            <ul class="price-features">
+              <li>Any studio class</li>
+              <li>All levels welcome</li>
+              <li>Mat available to rent</li>
+              <li>No commitment required</li>
+            </ul>
+            <!-- REPLACE: update booking link -->
+            <a href="#" class="btn btn-outline-light">Book Drop-In</a>
+          </div>
+
+          <div class="price-card featured">
+            <h3>Monthly Unlimited</h3>
+            <div class="price-amount"><sup>$</sup>120</div>
+            <p class="price-period">per month</p>
+            <ul class="price-features">
+              <li>Unlimited studio classes</li>
+              <li>Priority booking</li>
+              <li>10% off workshops</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="#" class="btn btn-light">Get Monthly Access</a>
+          </div>
+
+          <div class="price-card">
+            <h3>Class Pack</h3>
+            <div class="price-amount"><sup>$</sup>95</div>
+            <p class="price-period">5 classes</p>
+            <ul class="price-features">
+              <li>5 studio classes ($19/ea)</li>
+              <li>Valid for 3 months</li>
+              <li>Shareable with a friend</li>
+              <li>No expiry rush</li>
+            </ul>
+            <a href="#" class="btn btn-outline-light">Buy a Pack</a>
+          </div>
+
+        </div>
+
+        <!-- Private / Workshop pricing note -->
+        <div style="margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; text-align: center;">
+
+          <div style="padding: 2rem; border: 1px solid rgba(253,251,247,0.09);">
+            <p style="font-family: var(--serif); font-size: 1.4rem; color: var(--cr100); margin-bottom: 0.4rem;">Private 1-on-1</p>
+            <p style="font-family: var(--serif); font-size: 2.5rem; color: var(--cr100); font-weight: 300;"><sup style="font-size:1rem">$</sup>95<span style="font-size:0.9rem; color: rgba(253,251,247,0.4);">/session</span></p>
+            <p style="font-size: 0.82rem; color: rgba(253,251,247,0.45); margin-top: 0.5rem;">60 min · In-studio or virtual</p>
+          </div>
+
+          <div style="padding: 2rem; border: 1px solid rgba(253,251,247,0.09);">
+            <p style="font-family: var(--serif); font-size: 1.4rem; color: var(--cr100); margin-bottom: 0.4rem;">Private Group</p>
+            <p style="font-family: var(--serif); font-size: 2.5rem; color: var(--cr100); font-weight: 300;"><sup style="font-size:1rem">$</sup>65<span style="font-size:0.9rem; color: rgba(253,251,247,0.4);">/person</span></p>
+            <p style="font-size: 0.82rem; color: rgba(253,251,247,0.45); margin-top: 0.5rem;">2–8 people · Custom session</p>
+          </div>
+
+          <div style="padding: 2rem; border: 1px solid rgba(253,251,247,0.09);">
+            <p style="font-family: var(--serif); font-size: 1.4rem; color: var(--cr100); margin-bottom: 0.4rem;">Workshops</p>
+            <p style="font-family: var(--serif); font-size: 2.5rem; color: var(--cr100); font-weight: 300;"><sup style="font-size:1rem">$</sup>45<span style="font-size:0.9rem; color: rgba(253,251,247,0.4);">–75</span></p>
+            <p style="font-size: 0.82rem; color: rgba(253,251,247,0.45); margin-top: 0.5rem;">Varies by workshop · Limited spots</p>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <p style="font-size: 0.85rem; color: rgba(253,251,247,0.4); margin-bottom: 2rem;">
+            Not sure which option is right for you? Reach out — I'm happy to help.
+          </p>
+          <a href="contact.html" class="btn btn-outline-light">Ask a Question</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BOOKING CTA
+         Squarespace: Button Block + Text Block
+         ═══════════════════════════════════════════════════════ -->
+    <section class="cta-band" id="book" aria-label="Booking call to action">
+      <span class="section-label">Book Your Spot</span>
+      <h2>Ready to step<br><em>on the mat?</em></h2>
+      <p>
+        Booking is simple — choose your class, pick your time, and show up.
+        Everything else is taken care of.
+      </p>
+      <div class="cta-band-btns">
+        <!-- REPLACE: link to your Acuity / Mindbody / Calendly scheduler -->
+        <a href="#" class="btn btn-primary">Book Online Now</a>
+        <a href="contact.html" class="btn btn-outline">Contact Me First</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
   <footer>
-    <span class="footer-logo">Yoga by Chloe</span>
-    <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="classes.html">Classes</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <span class="footer-copy">&copy; 2026 Yoga by Chloe. All rights reserved.</span>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo-text" href="index.html">Ember &amp; Root</a>
+        <p>Nourishing, mindful, grounded yoga in [City, State].</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TK</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offerings</h4>
+        <ul>
+          <li><a href="classes.html">Studio Classes</a></li>
+          <li><a href="classes.html">Workshops</a></li>
+          <li><a href="classes.html">Private Sessions</a></li>
+          <li><a href="classes.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:hello@emberandroot.com">hello@emberandroot.com</a></li>
+          <li><a href="#">Book a Session</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ember &amp; Root. All rights reserved.</span>
+      <span>Built for Squarespace — V1 Mockup</span>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

@@ -1,81 +1,44 @@
-/* =========================================================
-   Yoga by Sofia — Main JS
-   ========================================================= */
+// Ember & Root — V1 — main.js
 
-// ── Nav scroll behaviour ──────────────────────────────────
-(function () {
-  var nav = document.getElementById('main-nav');
-  if (!nav) return;
+// Nav: add .scrolled class on scroll
+const nav = document.querySelector('.site-nav');
+if (nav) {
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
-  var hasHero = !!document.querySelector('.hero');
-
-  if (hasHero) {
-    function updateNav() {
-      if (window.scrollY > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    }
-    window.addEventListener('scroll', updateNav, { passive: true });
-    updateNav();
-  }
-  // Inner pages already have class="scrolled" in HTML markup
-})();
-
-// ── Newsletter form feedback ──────────────────────────────
-document.querySelectorAll('.newsletter-form').forEach(function (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn   = form.querySelector('button');
-    var input = form.querySelector('input');
-    btn.textContent  = 'Subscribed ✓';
-    btn.disabled     = true;
-    input.value      = '';
-    input.disabled   = true;
-    setTimeout(function () {
-      btn.textContent = 'Subscribe';
-      btn.disabled    = false;
-      input.disabled  = false;
-    }, 4000);
+// Mobile menu toggle
+const toggle = document.querySelector('.nav-toggle');
+const links  = document.querySelector('.nav-links');
+if (toggle && links) {
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+    const open = links.classList.contains('open');
+    toggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   });
-});
-
-// ── Contact form feedback ─────────────────────────────────
-(function () {
-  var form = document.querySelector('.contact-form');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent ✓';
-    btn.disabled    = true;
-    setTimeout(function () {
-      btn.textContent = 'Send Message';
-      btn.disabled    = false;
-      form.reset();
-    }, 4000);
+  // Close on link click
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+    });
   });
-})();
+}
 
-// ── Fade-in on scroll (Intersection Observer) ─────────────
-(function () {
-  if (!('IntersectionObserver' in window)) return;
-
-  var targets = document.querySelectorAll(
-    '.class-card, .about-image, .about-text, .contact-grid > *, .schedule-wrapper'
-  );
-
-  targets.forEach(function (el) { el.classList.add('fade-in-ready'); });
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+// Fade-in on scroll (light animation for sections)
+const fadeEls = document.querySelectorAll('[data-fade]');
+if (fadeEls.length && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 });
-
-  targets.forEach(function (el) { observer.observe(el); });
-})();
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => io.observe(el));
+}
