@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials — Ember &amp; Root</title>
+  <meta name="description" content="Read what students say about their Ember & Root yoga experience." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Page-specific styles for testimonials full page */
+    .t-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .t-full-card {
+      background: var(--cr200);
+      padding: 2.8rem;
+      border-left: 2px solid var(--g300);
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .t-full-card:hover { background: var(--cr300); border-color: var(--g500); }
+    .t-full-card .stars { color: var(--g500); font-size: 0.82rem; letter-spacing: 0.05em; margin-bottom: 1.2rem; }
+    .t-full-card blockquote {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--g700);
+      line-height: 1.75;
+      margin-bottom: 1.6rem;
+    }
+    .t-full-card .t-meta { display: flex; flex-direction: column; gap: 0.2rem; }
+    .t-full-card .t-name { font-size: 0.72rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--g500); }
+    .t-full-card .t-detail { font-size: 0.78rem; color: var(--text-lt); }
+
+    /* Featured large testimonial */
+    .t-featured {
+      background: var(--g800);
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .t-featured blockquote {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cr200);
+      line-height: 1.6;
+      max-width: 820px;
+      margin: 0 auto 2rem;
+    }
+    .t-featured cite {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--g300);
+      font-style: normal;
+    }
+
+    @media (max-width: 900px) { .t-full-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .t-full-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Ember &amp; Root</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="classes.html#book" class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PAGE HERO
+         Squarespace: Banner Block (top of Testimonials page)
+         ═══════════════════════════════════════════════════════ -->
+    <header class="page-hero">
+      <span class="section-label">Student Stories</span>
+      <h1>Kind Words</h1>
+      <p>
+        Real words from real students. Every body. Every level.
+        Every story matters.
+      </p>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FEATURED TESTIMONIAL
+         Squarespace: Markdown Block on dark section
+         ═══════════════════════════════════════════════════════ -->
+    <section class="t-featured" aria-label="Featured testimonial">
+      <span class="section-label" style="color: var(--g300);">Featured</span>
+      <blockquote>
+        "I walked in not knowing what to expect and walked out feeling like
+        I had finally come home to myself. Chloe has a rare gift — she
+        doesn't just teach yoga, she teaches you how to listen to your own
+        body again. I didn't know how much I needed that until I found it."
+      </blockquote>
+      <cite>— Renée M., Private Session Client</cite>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         TESTIMONIALS GRID
+         Squarespace: Testimonials Block  OR  3-column
+         Markdown layout (one block per testimonial)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="testimonials-page" aria-labelledby="t-grid-heading">
+      <span class="section-label" style="text-align:center; display:block;">What Students Say</span>
+      <h2 id="t-grid-heading">Student Experiences</h2>
+
+      <div class="t-full-grid">
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "This isn't just a yoga class — it's a full reclamation of your
+            body and spirit. I've never felt more connected to myself. Chloe
+            holds space unlike anyone else."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Maya T.</span>
+            <span class="t-detail">Studio Student · 6 months</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "Every class leaves me feeling rooted and alive. The way she
+            weaves breath, movement, and presence together is unlike anything
+            I've experienced. I look forward to it all week."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Jordan P.</span>
+            <span class="t-detail">Workshop Attendee</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "I came in as a complete beginner and was immediately welcomed.
+            No judgment, just presence. Three months in and I've grown more
+            than I imagined possible."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Sara K.</span>
+            <span class="t-detail">Beginner Student · 3 months</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "We hired Chloe for a private group session for my bachelorette
+            weekend and it was the highlight of the entire trip. Every person
+            in the group — whether experienced or brand new — felt seen and
+            cared for. Unforgettable."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Tessa D.</span>
+            <span class="t-detail">Private Group Session</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "I've been to plenty of yoga studios. This is something different.
+            The attention to how mind and body are connected in every class
+            is something you don't find everywhere. I drive 40 minutes to be here."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Marcus L.</span>
+            <span class="t-detail">Monthly Member · 1 year</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "The workshops are worth every penny. In two hours I learned more
+            about my breath than in years of practice. She makes esoteric
+            concepts feel grounded and accessible. I always leave transformed."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Priya N.</span>
+            <span class="t-detail">Workshop Series</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "My private sessions have changed the way I move through the world —
+            not just on the mat. Chloe took the time to really understand
+            what I needed and built a practice around that. Completely worth it."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Alexis W.</span>
+            <span class="t-detail">Private Lessons Client</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "I was nervous to try yoga for the first time at 52. Chloe made
+            it feel so natural and non-intimidating. There's no ego in her
+            classes — just warmth, wisdom, and space to breathe."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Donna H.</span>
+            <span class="t-detail">Beginner Student</span>
+          </div>
+        </article>
+
+        <article class="t-full-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            "The community that has formed around this studio is unlike anything
+            I've been a part of. It's not a class you show up to — it's a
+            space you belong to. Deeply grateful."
+          </blockquote>
+          <div class="t-meta">
+            <span class="t-name">Camille R.</span>
+            <span class="t-detail">Studio Community · 8 months</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SHARE YOUR STORY CTA
+         Squarespace: Form Block (optional review submission)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="cta-band" aria-label="Share your experience">
+      <span class="section-label">Your Story Matters</span>
+      <h2>Had an experience<br>worth sharing?</h2>
+      <p>
+        Testimonials help other students find their way here.
+        I'd love to hear about yours.
+      </p>
+      <div class="cta-band-btns">
+        <!-- REPLACE: link to Google Review, Yelp, or a Squarespace form -->
+        <a href="contact.html" class="btn btn-primary">Share Your Story</a>
+        <a href="classes.html#book" class="btn btn-outline">Book a Class</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo-text" href="index.html">Ember &amp; Root</a>
+        <p>Nourishing, mindful, grounded yoga in [City, State].</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TK</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offerings</h4>
+        <ul>
+          <li><a href="classes.html">Studio Classes</a></li>
+          <li><a href="classes.html">Workshops</a></li>
+          <li><a href="classes.html">Private Sessions</a></li>
+          <li><a href="classes.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:hello@emberandroot.com">hello@emberandroot.com</a></li>
+          <li><a href="#">Book a Session</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ember &amp; Root. All rights reserved.</span>
+      <span>Built for Squarespace — V1 Mockup</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
