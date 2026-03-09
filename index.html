@@ -1,165 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoga by Chloe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember & Root — Yoga</title>
+  <meta name="description" content="Nourishing, mindful, grounded yoga. Studio classes, workshops, and private sessions." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="main-nav">
-    <a href="index.html" class="nav-logo">Yoga by Chloe</a>
-    <ul class="nav-links">
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       Squarespace: Header > Navigation (Overlay / Fixed)
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html">Ember &amp; Root</a>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="classes.html">Classes</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="#book" class="nav-book-btn">Book Now</a></li>
     </ul>
+    <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Charleston, SC &nbsp;·&nbsp; All Levels Welcome</p>
-      <h1>Find Your<br><em>Glow Flow</em></h1>
-      <p class="hero-sub">
-        Mindful movement, breathwork &amp; community —<br>
-        rooted in joy and authenticity.
-      </p>
-      <a href="classes.html" class="btn btn-outline-white">Explore Classes</a>
-    </div>
-  </section>
+  <main>
 
-  <!-- About -->
-  <section class="about-section">
-    <div class="about">
-      <img
-        class="about-image"
-        src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=80"
-        alt="Chloe, yoga instructor"
-        loading="lazy"
-      >
-      <div class="about-text">
-        <p class="section-label">About Chloe</p>
-        <h2>Yoga for every<br><em>body</em> &amp; every soul</h2>
-        <p>
-          I'm Chloe — a Charleston-based yoga instructor with a passion for
-          creating space where movement meets mindfulness. My classes blend
-          dynamic flow, breath awareness, and moments of stillness to help
-          you feel truly at home in your body.
+    <!-- ═══════════════════════════════════════════════════════
+         HERO — Split: Massive type left, B&W photo right
+         Squarespace: Banner Block, text left / image right
+         ═══════════════════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+
+      <div class="hero-text-col">
+        <span class="eyebrow">Nourishing · Mindful · Grounded</span>
+        <h1 class="hero-h1">
+          Move.<br>
+          <em>Nourish.</em><br>
+          Become.
+        </h1>
+        <p class="hero-sub">
+          You don't need more strength.
+          You need more connection.
+          Come as you are.
         </p>
-        <p>
-          Whether you're stepping onto the mat for the first time or
-          deepening an established practice, I believe yoga is for
-          everyone. My signature Glow Flow method draws from Vinyasa, Yin,
-          and somatic principles to create a practice that is both
-          challenging and deeply nourishing.
+        <div class="hero-ctas">
+          <a href="classes.html" class="btn btn-beige">Explore Classes</a>
+          <a href="contact.html" class="btn btn-ghost-lt">Work With Me</a>
+        </div>
+      </div>
+
+      <div class="hero-img-col">
+        <!-- REPLACE: hero photo — use a high-contrast portrait or practice image -->
+        <img
+          src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=85"
+          alt="Yoga practice — placeholder image"
+        />
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         STATS STRIP
+         Squarespace: Row of Markdown blocks with large numbers
+         ═══════════════════════════════════════════════════════ -->
+    <div class="stats" aria-label="By the numbers">
+      <div class="stats-inner">
+        <div>
+          <!-- REPLACE: update with real numbers -->
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Years Teaching</span>
+        </div>
+        <div>
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Students Served</span>
+        </div>
+        <div>
+          <span class="stat-num">12</span>
+          <span class="stat-label">Classes Per Week</span>
+        </div>
+        <div>
+          <span class="stat-num">All</span>
+          <span class="stat-label">Levels Welcome</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SERVICES — Numbered List (hover reveals description)
+         Squarespace: Accordion Block  OR  stacked text layout
+         ═══════════════════════════════════════════════════════ -->
+    <section class="services" aria-labelledby="services-heading">
+
+      <div class="services-header">
+        <div>
+          <span class="eyebrow">What We Offer</span>
+          <h2 id="services-heading">Offerings<br>for Every<br>Path.</h2>
+        </div>
+        <div>
+          <p>
+            We don't chase a body type — we chase awareness and presence,
+            on and off the mat. Every offering is designed to meet you
+            exactly where you are and take you somewhere deeper.
+          </p>
+        </div>
+      </div>
+
+      <div class="service-list">
+
+        <div class="service-row">
+          <span class="service-row-num">01</span>
+          <div class="service-row-main">
+            <h3>Studio Classes</h3>
+            <p>Weekly group classes for all levels. Drop in or commit monthly — the mat is always ready for you.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-row-num">02</span>
+          <div class="service-row-main">
+            <h3>Specialized Workshops</h3>
+            <p>Deep-dive sessions on breathwork, somatics, yin, and seasonal rituals. Limited spots, full presence.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-row-num">03</span>
+          <div class="service-row-main">
+            <h3>Private Lessons</h3>
+            <p>Completely tailored 1-on-1 sessions. Your goals. Your pace. Undivided attention.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-row-num">04</span>
+          <div class="service-row-main">
+            <h3>Private Group Sessions</h3>
+            <p>For 2–8 people. Perfect for celebrations, corporate wellness, and meaningful gatherings.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+        <div class="service-row">
+          <span class="service-row-num">05</span>
+          <div class="service-row-main">
+            <h3>Events &amp; Retreats</h3>
+            <p>Curated community experiences. Pop-up classes, seasonal ceremonies, and multi-day retreats.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+
+      </div>
+
+      <div class="services-cta">
+        <a href="classes.html" class="btn btn-dark">View All Classes &amp; Pricing →</a>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ABOUT — Dark editorial section
+         Squarespace: Full-width black section with large quote
+         then 2-col image + text below
+         ═══════════════════════════════════════════════════════ -->
+    <section class="about" aria-labelledby="about-heading">
+      <div class="about-top">
+        <p class="about-pull">
+          "We aren't chasing a perfect routine —
+          we're <strong>romanticizing the mundane</strong>
+          and choosing sovereignty in the body."
         </p>
-        <a href="classes.html" class="btn btn-dark" style="margin-top:1.75rem; display:inline-block;">View My Classes</a>
-        <p class="about-signature">— Chloe</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Philosophy Quote -->
-  <div class="philosophy-strip">
-    <blockquote>
-      "My mat is a sacred space.<br>
-      My couch is also a sacred space.<br>
-      I'm a very spiritual person."
-    </blockquote>
-  </div>
+      <div class="about-grid">
 
-  <!-- Classes Preview -->
-  <section class="classes-preview">
-    <p class="section-label">What I Offer</p>
-    <h2>Classes &amp; Workshops</h2>
-    <p>
-      From energising morning flows to candlelit restorative sessions —
-      there's a class designed for every mood and moment.
-    </p>
-
-    <div class="classes-grid">
-      <div class="class-card">
-        <div class="class-card-img-wrap">
+        <div class="about-image-wrap">
+          <!-- REPLACE: instructor portrait photo -->
           <img
-            class="class-card-img"
-            src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=700&q=80"
-            alt="Signature Glow Flow class"
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=85"
+            alt="Yoga instructor — placeholder"
             loading="lazy"
-          >
+          />
+          <p class="about-image-caption">Chloe · Founder, Ember &amp; Root</p>
         </div>
-        <div class="class-card-body">
-          <p class="class-tag">Dynamic</p>
-          <h3>Signature Glow Flow</h3>
-          <p>A vibrant Vinyasa-inspired sequence synchronised with breath. Build heat, strength, and radiance from the inside out.</p>
+
+        <div class="about-body">
+          <span class="eyebrow">About Your Instructor</span>
+          <p id="about-heading">
+            I teach yoga for people who are ready to feel at home in their
+            own body. My classes aren't about hitting shapes or chasing
+            flexibility milestones. They're about learning to listen, to
+            breathe, to trust what you feel.
+          </p>
+          <p>
+            Whether you're stepping on the mat for the very first time or
+            deepening a practice you've held for years — there's space here
+            for you. Not louder. Not harder. Deeper.
+          </p>
+          <p>
+            We bridge the gap between mind, body, and awareness so that
+            movement becomes the medicine it's always been.
+          </p>
+          <div class="about-tags">
+            <span class="about-tag">Nourishing</span>
+            <span class="about-tag">Mindful</span>
+            <span class="about-tag">Grounded</span>
+            <span class="about-tag">Soulful</span>
+          </div>
+          <a href="contact.html" class="btn btn-ghost-lt">Work With Me</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         TESTIMONIALS — Stacked editorial list
+         Squarespace: Testimonials Block (minimal variant)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="testimonials-home" aria-labelledby="t-home-heading">
+
+      <div class="t-home-top">
+        <div>
+          <span class="eyebrow">Kind Words</span>
+          <h2 id="t-home-heading">What Students Say</h2>
+        </div>
+        <a href="testimonials.html">See all testimonials →</a>
+      </div>
+
+      <div class="t-stack">
+
+        <div class="t-row">
+          <div class="t-row-num">01</div>
+          <blockquote>
+            "This isn't just a yoga class — it's a full reclamation of your
+            body and spirit. I've never felt more connected to myself.
+            Chloe holds space unlike anyone else."
+          </blockquote>
+          <div class="t-row-meta">
+            <span class="t-row-name">Maya T.</span>
+            <span class="t-row-detail">Studio Student, 6 months</span>
+          </div>
+        </div>
+
+        <div class="t-row">
+          <div class="t-row-num">02</div>
+          <blockquote>
+            "Every class leaves me feeling rooted and alive. The way she
+            weaves breath, movement, and presence together is unlike anything
+            I've experienced. I look forward to it all week."
+          </blockquote>
+          <div class="t-row-meta">
+            <span class="t-row-name">Jordan P.</span>
+            <span class="t-row-detail">Workshop Attendee</span>
+          </div>
+        </div>
+
+        <div class="t-row">
+          <div class="t-row-num">03</div>
+          <blockquote>
+            "I came in as a complete beginner and was immediately welcomed.
+            No judgment, just presence. Three months in and I've grown more
+            than I imagined possible."
+          </blockquote>
+          <div class="t-row-meta">
+            <span class="t-row-name">Sara K.</span>
+            <span class="t-row-detail">Beginner Student</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CTA — Split black band
+         Squarespace: Banner Block, 2-col, black background
+         ═══════════════════════════════════════════════════════ -->
+    <section class="cta-band" id="book" aria-label="Call to action">
+
+      <div class="cta-band-left">
+        <h2>Your practice<br>starts <em>here.</em></h2>
+      </div>
+
+      <div class="cta-band-right">
+        <p>
+          Beginners welcome. No experience needed — only a willingness to
+          show up for yourself. Book a class or reach out and we'll find
+          the right fit together.
+        </p>
+        <div class="cta-btns">
+          <!-- REPLACE: update with Acuity / Calendly / Mindbody link -->
+          <a href="#" class="btn btn-beige">Book a Class</a>
+          <a href="classes.html" class="btn btn-ghost-lt">View Pricing</a>
         </div>
       </div>
 
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=700&q=80"
-            alt="Candlelit Yin Yoga class"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Restorative</p>
-          <h3>Candlelit Yin</h3>
-          <p>Long, passive holds in a warm candlelit space. Release tension in the connective tissue and quiet the nervous system.</p>
-        </div>
-      </div>
+    </section>
 
-      <div class="class-card">
-        <div class="class-card-img-wrap">
-          <img
-            class="class-card-img"
-            src="https://images.unsplash.com/photo-1591291621164-2c6367723315?w=700&q=80"
-            alt="Breathwork and Meditation class"
-            loading="lazy"
-          >
-        </div>
-        <div class="class-card-body">
-          <p class="class-tag">Mindfulness</p>
-          <h3>Breathwork &amp; Meditation</h3>
-          <p>Guided pranayama and meditation to reduce stress, improve focus, and cultivate inner stillness.</p>
-        </div>
-      </div>
-    </div>
+  </main>
 
-    <a href="classes.html" class="btn btn-dark">See Full Schedule</a>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <p class="section-label" style="color:rgba(255,255,255,0.45);">Stay Connected</p>
-    <h2>Join the Community</h2>
-    <p>
-      Receive class updates, seasonal offerings, wellness tips, and a little
-      inspiration delivered to your inbox.
-    </p>
-    <form class="newsletter-form" novalidate>
-      <input type="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       Squarespace: Footer Block (beige background)
+       ═══════════════════════════════════════════════════════ -->
   <footer>
-    <span class="footer-logo">Yoga by Chloe</span>
-    <ul class="footer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="classes.html">Classes</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <span class="footer-copy">&copy; 2026 Yoga by Chloe. All rights reserved.</span>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo-type" href="index.html">Ember &amp; Root</a>
+        <p>
+          Nourishing, mindful, grounded yoga in [City, State].
+          Studio classes, private sessions, workshops &amp; events.
+        </p>
+        <!-- REPLACE: real social links -->
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TK</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offerings</h4>
+        <ul>
+          <li><a href="classes.html">Studio Classes</a></li>
+          <li><a href="classes.html">Workshops</a></li>
+          <li><a href="classes.html">Private Sessions</a></li>
+          <li><a href="classes.html">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:hello@emberandroot.com">hello@emberandroot.com</a></li>
+          <li><a href="#">Book a Session</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ember &amp; Root. All rights reserved.</span>
+      <span>Built for Squarespace — V2 Mockup</span>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
